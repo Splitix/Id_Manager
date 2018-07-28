@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+ipython = "*"
+livereload = "*"
+
+[packages]
+"psycopg2-binary" = ">=2.7.4"
+Flask = ">=1.0.2"
+Flask-Cors = ">=3.0.4"
+Flask-RESTful = ">=0.3.6"
+GitHub-Flask = ">=3.2.0"
+python-socketio = "*"
+eventlet = "*"
+
+[requires]
+python_version = "3.6"

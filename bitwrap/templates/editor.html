@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+    <title>bitwrap-io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="https://bitwrap.io/image/bw-logo.png" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <style>
+    .codearea {
+        background-color:#000;
+        color:#fff;
+        font-family:'Oxygen Mono', Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+        font-size:14px;
+        overflow: auto;
+    }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.5.1/www/src/brython.js" crossorigin="anonymous"> </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.5.1/www/src/brython_stdlib.js" crossorigin="anonymous"> </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yesmeck/jquery-jsonview/master/dist/jquery.jsonview.css" />
+    <script type="text/javascript" src="https://cdn.rawgit.com/yesmeck/jquery-jsonview/master/dist/jquery.jsonview.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js" crossorigin="anonymous"></script>
+
+    <script> var Bitwrap = { config: "config/default.json" }</script>
+
+    <!-- init the ui -->
+    <script>
+    $( function() {
+      $('#tabs').tabs();
+    });
+    </script>
+
+    <!-- run the console app -->
+    <script type="text/python3" src="main.py"></script>
+
+</head>
+<body onload="brython(1)">
+  <div id="tabs">
+
+    <div id="#tabs-1">
+      <div class="widget">
+        <fieldset>
+          <legend>Petri-Net</legend>
+          <div class="controlgroup">
+            <button class="select" id="select">select</button>
+            <button class="tool" id="delete">delete</button>
+            <button class="symbol" id="place">place</button>
+            <button class="symbol" id="transition">transition</button>
+            <button class="tool" id="arc">arc</button>
+            <button class="tool" id="inc_token">+token</button>
+            <button class="tool" id="dec_token">-token</button>
+            <span> | </span>
+            <button class="simulator" id="exec">exec</button>
+            <button class="simulator" id="reset">reset</button>
+            <span> | </span>
+            <select class="netselect" id="netselect">
+              <option>untitled</option>
+            </select>
+            <button class="netsave" id="netsave">save</button>
+            <button class="netreload" id="netreload">reload</button>
+            <span> | </span>
+            <button class="dbreload" id="dbreload">install db</button>
+          </div>
+        </fieldset>
+      </div>
+
+      <svg id="net" width="100%" height="700px" xmlns="http://www.w3.org/2000/svg"></svg>
+      <textarea id="code" class="codearea" rows="10" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="height: 100%; width: 100%"></textarea>
+    </div>
+
+    <div id="#tabs-2">
+      <div id="json"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

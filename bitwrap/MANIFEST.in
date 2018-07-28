@@ -1,0 +1,3 @@
+recursive-include bitwrap_io *.*
+recursive-include templates *.html
+recursive-include schemata *.xml

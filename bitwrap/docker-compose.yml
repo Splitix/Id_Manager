@@ -1,0 +1,12 @@
+---
+version: '2'
+services:
+  postgres:
+    image: postgres:10
+    hostname: bitwrap-postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: bitwrap
+      POSTGRES_PASSWORD: bitwrap
+      POSTGRES_DB: bitwrap
