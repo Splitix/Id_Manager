@@ -15,7 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class IdDetailsPage {
 
+	color: string;
+	id: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	this.id = navParams.get('data');
+  	console.log(this.id);
   }
 
   ionViewDidLoad() {

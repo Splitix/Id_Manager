@@ -6,16 +6,17 @@
 
 <ion-content class="card-background-page">
   <!-- TODO: Needs to be in a for loop providing the data each time (Remove all by one card)-->
-  <ion-card>
+
+  <ion-card (click)="goToDetails(data)">
     <img src="/assets/imgs/color1.png"/>
-    <div class="card-title">Identification Card</div>
-    <div class="card-subtitle">3 Views</div>
+    <div class="card-title">{{ data.title }}</div>
+    <div class="card-subtitle">{{ data.views }}</div>
   </ion-card>
 
   <ion-card>
     <img src="/assets/imgs/color2.png"/>
     <div class="card-title">Birth Certificate</div>
-    <div class="card-subtitle">10 Views</div>
+    <div class="card-subtitle">7 Views</div>
   </ion-card>
 
   <ion-card>
@@ -29,5 +30,4 @@
     <div class="card-title">Disability Id</div>
     <div class="card-subtitle">2 Views</div>
   </ion-card>
-
 </ion-content>
