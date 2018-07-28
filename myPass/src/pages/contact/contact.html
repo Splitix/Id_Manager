@@ -1,17 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Contact Resources
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+  <ion-list inset>
+    <button ion-item *ngFor="let contact of contacts" (click)="itemSelected(contact)">
+    {{ contact }}
+  </button> 
   </ion-list>
 </ion-content>
