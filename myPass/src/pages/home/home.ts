@@ -13,10 +13,10 @@ import { HttpClient } from '@angular/common/http';
 export class HomePage {
 	ids: Observable<any>;
 	name: string;
-	data: Observable<any>;
+	// data: Observable<any>;
 
   constructor(public navCtrl: NavController, public httpClient: HttpClient) {
-  	this.ids = this.httpClient.get('https://jsonplaceholder.typicode.com/posts/');
+  	// this.ids = this.httpClient.get('https://jsonplaceholder.typicode.com/posts/');
   }
 
   data = {

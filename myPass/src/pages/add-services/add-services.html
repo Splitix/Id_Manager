@@ -1,0 +1,123 @@
+<!--
+  Generated template for the AddServicesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add A Services</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToDetails(service)">
+        <p>Save</p>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<!-- 	<ion-fab top right edge>
+  	<button ion-fab>Save</button>
+ 	</ion-fab>
+ -->
+
+<!--  <ion-item-sliding #item>
+  <ion-item (click)="goToDetails(data)">
+    <ion-avatar item-start>
+      <img src="../../assets/imgs/medical_icon.png">
+    </ion-avatar>
+    <h2>MAP</h2>
+    <h3>Medical Access Program</h3>
+    <p style='color:red;'>Status: Ready</p>
+  </ion-item>
+  <ion-item-options side="right">
+    <button ion-button color="secondary"(click)="unread(item)">Add</button>
+  </ion-item-options>
+</ion-item-sliding> -->
+
+ 	<ion-list>
+		<ion-list-header>
+	    Avilable Services
+	  </ion-list-header>
+	  <ion-item-sliding *ngFor="let item of payload">
+		  <ion-item (click)="goToDetails(data)">
+		    <ion-avatar item-start>
+		      <img src="../../assets/imgs/medical_icon.png">
+		    </ion-avatar>
+		    <h2>{{ item.abv }}</h2>
+		    <h3>{{ item.name }}</h3>
+		    <p [ngStyle]="{'color': item.status}">{{ item.status_comp }}</p>
+		  </ion-item>
+		  <ion-item-options side="right">
+		    <button ion-button color="secondary" (click)="addService(item)">Add</button>
+		  </ion-item-options>
+		</ion-item-sliding>
+	</ion-list>
+
+
+
+<!-- 	  <ion-item *ngFor="let item of payload" (click)="goToDetails(data)">
+	    <ion-avatar item-start>
+	      <img src="../../assets/imgs/medical_icon.png">
+	    </ion-avatar>
+	    <h2>{{ item.abv }}</h2>
+	    <h3>{{ item.name }}</h3>
+	    <p [ngStyle]="{'color': item.status}">{{ item.status_comp }}</p>
+	  </ion-item>
+	</ion-list> -->
+
+	<!-- <ion-list>
+		<ion-list-header>
+	    Avilable Services
+	  </ion-list-header>
+	  <ion-item-sliding #item>
+	    <ion-item (click)="goToDetails(data)">
+		    <ion-avatar item-start>
+		      <img src="../../assets/imgs/medical_icon.png">
+		    </ion-avatar>
+		    <h2>MAP</h2>
+		    <h3>Medical Access Program</h3>
+		    <p style='color:red;'>Status: Ready</p>
+		  </ion-item>
+	    <ion-item-options side="right">
+	      <button ion-button color="secondary"(click)="unread(item)">Add</button>
+	    </ion-item-options>
+	  </ion-item-sliding>
+
+	  <ion-item-sliding #item>
+	    <ion-item (click)="goToDetails(data)">
+		    <ion-avatar item-start>
+		      <img src="../../assets/imgs/medical_icon.png">
+		    </ion-avatar>
+		    <h2>MAP</h2>
+		    <h3>Medical Access Program</h3>
+		    <p style='color:red;'>Status: Ready</p>
+		  </ion-item>
+	    <ion-item-options side="right">
+	      <button ion-button color="secondary"(click)="unread(item)">Add</button>
+	    </ion-item-options>
+	  </ion-item-sliding>
+
+	  <ion-item-sliding #item>
+	    <ion-item (click)="goToDetails(data)">
+		    <ion-avatar item-start>
+		      <img src="../../assets/imgs/medical_icon.png">
+		    </ion-avatar>
+		    <h2>MAP</h2>
+		    <h3>Medical Access Program</h3>
+		    <p style='color:red;'>Status: Ready</p>
+		  </ion-item>
+	    <ion-item-options side="right">
+	      <button ion-button color="secondary"(click)="unread(item)">Add</button>
+	    </ion-item-options>
+	  </ion-item-sliding>
+	</ion-list> -->
+
+</ion-content>
