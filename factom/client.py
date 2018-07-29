@@ -6,7 +6,7 @@ FACTOM_URL = 'http://localhost:8088/v2'
 WALLET_URL = 'http://localhost:8089/v2'
 HEADERS = {'content-type' : 'text/plain'}
 
-# Create a new ec address
+# Create a new EC address
 def create_ec_address():
     data = {
         "jsonrpc": "2.0",
@@ -17,7 +17,7 @@ def create_ec_address():
     result_dict = r.json()
     return result_dict['result']['public']
 
-# Exchange factoms to entry credits
+# Exchange Factoids for Entry Credits
 def fct_to_ec(ec_address, tx_name, amount):
     data = {
         "jsonrpc": "2.0",
