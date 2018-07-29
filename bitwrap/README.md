@@ -1,20 +1,25 @@
-# Bitwrap-io
+# Python API
 
-A state-machine eventstore 'blockchain style'.
+This python API serves as an interface for the front end app.
 
-Using Markov chains stored in a Postgres database.
+As a design principle, all specifications needed to duplicate this functionality are pushed to the blockchain.
 
-Read the whitepaper [Solving 'State Exposion' with Petri-Nets and Vector Clocks](https://github.com/bitwrap/bitwrap-io/blob/master/whitepaper.md)
+Event schemas are included to allows any other organization to replicate the features of the API.
 
-### Status
+If it were required to implement the application entirely as a distributed application on chain.
+The event aggregation funcationality could be relocated from python to another smart contract language.
 
-bitwrap eventstore API using [Flask](http://flask.pocoo.org/) and [SocketIO](https://socket.io/)
+## see ./schemata folder for details
 
-[Brython](https://www.brython.info/static_doc/en/intro.html) Web UI is mostly complete.
+*schemata/specification.xml*  
+
+Defines events that record updates for the application specification.
 
 
-### Features
+*schemata/event.xml*  
 
-* Visual State machine designer *does not yet save back to server*
-* Eventstore using a relational DB
-* Websocket support for observing event streams
+Defines events that are triggered by end-users interacting with the application.
+
+*schemata/workflow.xml*  
+
+Defines an example contract specification that demonstate an Authority executing a final sign-off.
