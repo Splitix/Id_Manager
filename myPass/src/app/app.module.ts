@@ -11,6 +11,7 @@ import { IdDetailsPage } from '../pages/id-details/id-details';
 import { ResourcesPage } from '../pages/resources/resources';
 import { ResourcesDetailsPage } from '../pages/resources-details/resources-details';
 import { AddServicesPage } from '../pages/add-services/add-services';
+import { ContactDetailsPage } from '../pages/contact-details/contact-details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     IdDetailsPage,
     ResourcesPage,
     ResourcesDetailsPage,
-    AddServicesPage
+    AddServicesPage,
+    ContactDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     IdDetailsPage,
     ResourcesPage,
     ResourcesDetailsPage,
-    AddServicesPage
+    AddServicesPage,
+    ContactDetailsPage
   ],
   providers: [
     StatusBar,

@@ -21,11 +21,11 @@
 <ion-slides pager="true" style="max-height:190px">
  
   <ion-slide>
-    <img src="../../assets/imgs/idCard.jpg" />
+    <img src="/assets/imgs/{{ id.front }}" />
   </ion-slide>
  
   <ion-slide>
-    <img src="../../assets/imgs/idCard_back.png" />
+    <img src="/assets/imgs/{{ id.back }}" />
   </ion-slide>
  
 </ion-slides>
@@ -34,9 +34,9 @@
 	<label>Id Type: {{ id.title }}</label>
 </div>
 <div class="rcorners1">
-	<label>Expires: 01-01-2020</label>
+	<label>Expires: {{ id.expires }}</label>
 </div>
 <div class="rcorners1">
-	<label>Verified By: Sean Thornton</label>
+	<label>Verified By: {{ id.verified }}</label>
 </div>
 </ion-content>

@@ -8,10 +8,16 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-list-header>
+      Health
+    </ion-list-header>
+    <ion-item *ngFor="let item of medical" (click)='goToDetails(item)'>{{ item.abv }}</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Housing
+    </ion-list-header>
+    <ion-item>ECHO</ion-item>
   </ion-list>
 </ion-content>

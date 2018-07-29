@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ContactDetailsPage } from '../contact-details/contact-details';
 
 /**
  * Generated class for the ResourcesDetailsPage page.
@@ -19,10 +20,10 @@ export class ResourcesDetailsPage {
 		{name:'Check Stubs', abv:'paystub', value:false}
 	]
 	show:boolean = true;
+	data:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   	this.data = navParams.get('data');
-
   }
 
   checkbox(value, service):void {
@@ -34,6 +35,12 @@ export class ResourcesDetailsPage {
   	} else {
   		this.show = true
   	}
+  }
+
+  goToContacts():void {
+  	this.navCtrl.push(ContactDetailsPage, {
+      data: {abv:'MAP', name:'Central Health', phone:'(512) 978-8130', address:'6633 E Hwy 290 #310, Austin, TX 78723', logo:'map_logo.png', map:'map_location.png'}
+    });
   }
 
   ionViewDidLoad() {

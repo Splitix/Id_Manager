@@ -22,10 +22,18 @@ page-home {
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
-    top: 52%;
+    bottom: 8px;
+    left: 70px;
+    font-size: 18px;
     padding-top: 3px;
     width: 100%;
     color: #fff;
+  }
+
+  .bottom-card {
+     position: fixed;
+     bottom: 0;
+     right: 0;
   }
 
 }

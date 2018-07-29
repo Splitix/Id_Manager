@@ -16,7 +16,7 @@ import { AddServicesPage } from '../add-services/add-services';
   templateUrl: 'resources.html',
 })
 export class ResourcesPage {
-	data: Observable<any>;
+	data:any;
 	payload: any = [
 	  	{abv: 'MAP', name:'Medical Access Program', status:'green', status_comp:'100% - Ready'},
 	  	{abv: 'ECHO', name:'Ending Community Homelessness Coalition', status:'green', status_comp:'100% - Ready'},

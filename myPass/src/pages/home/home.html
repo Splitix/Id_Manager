@@ -7,27 +7,10 @@
 <ion-content class="card-background-page">
   <!-- TODO: Needs to be in a for loop providing the data each time (Remove all by one card)-->
 
-  <ion-card (click)="goToDetails(data)">
-    <img src="/assets/imgs/color1.png"/>
-    <div class="card-title">{{ data.title }}</div>
-    <div class="card-subtitle">{{ data.views }}</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="/assets/imgs/color2.png"/>
-    <div class="card-title">Birth Certificate</div>
-    <div class="card-subtitle">7 Views</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="/assets/imgs/color3.png"/>
-    <div class="card-title">MAP Card</div>
-    <div class="card-subtitle">4 Views</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="/assets/imgs/color4.png"/>
-    <div class="card-title">Disability Id</div>
-    <div class="card-subtitle">2 Views</div>
+  <ion-card *ngFor="let item of data" (click)="goToDetails(item)">
+    <img height=15px src="/assets/imgs/{{ item.exp_status }}"/>
+    <img src="/assets/imgs/{{ item.color }}"/>
+    <div class="card-title">{{ item.title }}</div>
+    <div class="card-subtitle">exp: {{ item.expires }}</div>
   </ion-card>
 </ion-content>
