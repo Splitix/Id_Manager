@@ -11,7 +11,6 @@ HEADERS = {'content-type' : 'text/plain'}
 def commit_chain(ec, content, state):
     commit,reveal = _get_commit_chain(ec, content, state)
     r = requests.request("POST", FACTOM_URL, data=json.dumps(commit), headers=HEADERS)
-    print(json.loads(r.text))
     time.sleep(SLEEP)
     r = requests.request("POST", FACTOM_URL, data=json.dumps(reveal), headers=HEADERS)
     json_result = json.loads(r.text)
@@ -42,7 +41,6 @@ def _get_commit_chain(ec, content, state):
 # Commit a new entry to the chain
 def commit_entry(ec, chainid, content, state):
     commit,reveal = _get_commit_entry(ec, chainid, content, state)
-    print(json.dumps(commit))
     r = requests.request("POST", FACTOM_URL, data=json.dumps(commit), headers=HEADERS)
     time.sleep(SLEEP)
     r = requests.request("POST", FACTOM_URL, data=json.dumps(reveal), headers=HEADERS)
@@ -61,18 +59,17 @@ def _get_commit_entry(ec, chainid, content, state):
             "entry": {
                 "chainid": chainid,
                 "extids": [
-                    _hex('hex')
+                    _hex(state)
                 ]
             }
         }
     }
     r = requests.request("POST", WALLET_URL, data=json.dumps(data), headers=HEADERS)
-    print(r.text)
     json_result = json.loads(r.text)
     return json_result['result']['commit'], json_result['result']['reveal']
 
 # Get an entry
-def get_entry(ec, hash):
+def get_entry(hash):
     data = {
         "id": 0,
         "jsonrpc": "2.0",
@@ -82,7 +79,9 @@ def get_entry(ec, hash):
             }
         }
     r = requests.request("POST", FACTOM_URL, data=json.dumps(data), headers=HEADERS)
-    return r.text
+    json_result = json.loads(r.text)
+    return json_result['result']
 
+# String to hex. Source: https://stackoverflow.com/a/12214880
 def _hex(s):
     return "".join("{:02x}".format(ord(c)) for c in s)
