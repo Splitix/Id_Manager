@@ -169,6 +169,48 @@ class Config(Resource):
         }
         return res, 200, None
 
+
+class TrackedUserPackages(Resource):
+    """
+    Serves tracked user packages. This is an example for the moment. Route not added to api yet.
+    """
+
+    def get(self, user_id):
+        """
+        NOTE: This method is an example and will not currently run. db object not defined yet.
+        """
+        user = db.find_user_by_id(user_id)
+        res = user.get_active_packages_with_percents()
+        return res, 200, None
+
+
+class AllPackages(Resource):
+    """
+    Serves all packages. This is an example at the moment. Route not added to api yet.
+    """
+
+    def get(self):
+        """
+        NOTE: This method is an example and will not currently run. db object not defined yet.
+        """
+        res = db.find_all('packages')
+        return res, 200, None
+
+
+class PackageRequirements(Resource):
+    """
+    Serves requirements for a package. This s an example at the moment. Route not added to api yet.
+    """
+
+    def get(self, package_name):
+        """
+        NOTE: This method is an example and will not currently run. db object not defined yet.
+        """
+        package = db.find_by_name(package_name)
+        res = package['requirements']
+        return res, 200, None
+
+
 def bitwrap_api(app):
     """ load resource routes """
     CORS(app)
@@ -190,3 +232,4 @@ def bitwrap_api(app):
         api.add_resource(route.pop('resource'), *route.pop('urls'), **route)
 
     return api
+
