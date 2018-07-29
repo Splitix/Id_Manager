@@ -4,7 +4,7 @@ from browser import window
 class Controller(object):
     """ control loading and saving network definitions """
 
-    def __init__(self, context=None, editor=None, default_net='multipass'):
+    def __init__(self, context=None, editor=None, default_net='event'):
         self.editor = editor
         self.ctx = context
         self.select_net = default_net
