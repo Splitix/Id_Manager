@@ -1,0 +1,17 @@
+{
+    "chain_id": "f0ec1ecb5cd6be2d5d68355e956ee8d77b52e9ef52a026222ab7f3f7bcc436da",
+    "entry_hash": "d6e14e13723503a8b8f517a09b20bcc3cf2703fe0dbd3491ec6447c351429049",
+    "external_ids": {
+      "seq": 17,
+      "validator_chain_id": "8aa1fe7922a554612ce053388a48aa62671ef3e866142fef6d2d0092af30b702",
+      "validator_entry_hash": "cc5d658b34fcabba4626424640ef4d8bbd12ec2d1a4242a5afad6157d3d78582"
+    },
+    "entry": { ### encrypted ###
+      "state": [0,0,0,0,0,1,0,1,1,0,0,0,0,1,0,0,0],
+      "action": "upload_dps_id",
+      "document_type": "dps_id",
+      "document_signature": "f55c2ca10b07c2d77889c5e3f8c55504996485d53b19f9deee8326f8e83365a0",
+      "signed_by": "45d18daec7205784847e16a9d6b98d8ca4ae6be06a3469482c756eb7ea9509c1"
+
+    }
+}
