@@ -16,9 +16,11 @@ import { ResourcesPage } from '../resources/resources';
 })
 export class AddServicesPage {
 	payload: any = [
-	  	{abv: 'JOSH', name:'Joshua Good Deed Service', status:'green', status_comp:'100% - Ready'},
-	  	{abv: 'ECHO', name:'Ending Community Homelessness Coalition', status:'green', status_comp:'100% - Ready'},
-	  	{abv: 'SOAR', name:'SSI/SSDI Outreach, Access, and Recovery', status:'red', status_comp:'50% - Incomplete'},
+	  	{abv: 'ABC', name:'Any Baby Can', status:'green', status_comp:'100% - Ready', icon:'medical_icon.png'},
+	  	{abv: 'LIFE', name:'Lifeworks', status:'red', status_comp:'90% - Incomplete', icon:'hand_icon.png'},
+	  	{abv: 'SOCIAL WORK', name:'Travis County HHS Social Work Services', status:'red', status_comp:'50% - Incomplete', icon:'hand_icon.png'},
+      {abv: 'HELPING HANDS', name:'The Helping Hands Center', status:'red', status_comp:'50% - Incomplete', icon:'clothes_icon.png'},
+      {abv: 'FRONT', name:'Front Steps', status:'red', status_comp:'50% - Incomplete', icon:'clothes_icon.png'},
 	  ];
 	service:any = [];
 

@@ -18,9 +18,9 @@ import { AddServicesPage } from '../add-services/add-services';
 export class ResourcesPage {
 	data:any;
 	payload: any = [
-	  	{abv: 'MAP', name:'Medical Access Program', status:'green', status_comp:'100% - Ready'},
-	  	{abv: 'ECHO', name:'Ending Community Homelessness Coalition', status:'green', status_comp:'100% - Ready'},
-	  	{abv: 'SOAR', name:'SSI/SSDI Outreach, Access, and Recovery', status:'red', status_comp:'50% - Incomplete'},
+	  	{abv: 'MAP', name:'Medical Access Program', status:'red', status_comp:'50% - Incomplete', icon:'medical_icon.png'},
+	  	{abv: 'ECHO', name:'Ending Community Homelessness Coalition', status:'green', status_comp:'100% - Ready', icon:'house_icon.png'},
+	  	{abv: 'SOAR', name:'SSI/SSDI Outreach, Access, and Recovery', status:'red', status_comp:'50% - Incomplete', icon:'medical_icon.png'},
 	  ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

@@ -26,7 +26,7 @@
 	  </ion-list-header>
 	  <ion-item *ngFor="let item of payload" (click)="goToDetails(data)">
 	    <ion-avatar item-start>
-	      <img src="../../assets/imgs/medical_icon.png">
+	      <img src="../../assets/imgs/{{ item.icon }}">
 	    </ion-avatar>
 	    <h2>{{ item.abv }}</h2>
 	    <h3>{{ item.name }}</h3>

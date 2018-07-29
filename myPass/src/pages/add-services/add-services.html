@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Add A Services</ion-title>
+    <ion-title>Add A Resource</ion-title>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="goToDetails(service)">
@@ -49,7 +49,7 @@
 	  <ion-item-sliding *ngFor="let item of payload">
 		  <ion-item (click)="goToDetails(data)">
 		    <ion-avatar item-start>
-		      <img src="../../assets/imgs/medical_icon.png">
+		      <img src="../../assets/imgs/{{ item.icon }}">
 		    </ion-avatar>
 		    <h2>{{ item.abv }}</h2>
 		    <h3>{{ item.name }}</h3>
