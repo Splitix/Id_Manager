@@ -8,6 +8,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { IdDetailsPage } from '../pages/id-details/id-details';
+import { ResourcesPage } from '../pages/resources/resources';
+import { ResourcesDetailsPage } from '../pages/resources-details/resources-details';
+import { AddServicesPage } from '../pages/add-services/add-services';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    IdDetailsPage
+    IdDetailsPage,
+    ResourcesPage,
+    ResourcesDetailsPage,
+    AddServicesPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    IdDetailsPage
+    IdDetailsPage,
+    ResourcesPage,
+    ResourcesDetailsPage,
+    AddServicesPage
   ],
   providers: [
     StatusBar,

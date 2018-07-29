@@ -12,7 +12,31 @@
 
 </ion-header>
 
-<ion-content padding>
-	<ion-img width="290" height="180" src="../../assets/imgs/idCard.jpg"></ion-img>
-<label>Id Type: {{ id.title }}</label>
+<ion-content padding class="masters">
+<!-- 	<ion-img width="290" height="180" src="../../assets/imgs/idCard.jpg"></ion-img> <br />
+<label>Id Type: {{ id.title }}</label> <br />
+<label>Expires: 01-01-2020</label> <br />
+<label>Verified By: Sean Thornton</label> <br /> -->
+
+<ion-slides pager="true" style="max-height:190px">
+ 
+  <ion-slide>
+    <img src="../../assets/imgs/idCard.jpg" />
+  </ion-slide>
+ 
+  <ion-slide>
+    <img src="../../assets/imgs/idCard_back.png" />
+  </ion-slide>
+ 
+</ion-slides>
+
+<div class="rcorners1">
+	<label>Id Type: {{ id.title }}</label>
+</div>
+<div class="rcorners1">
+	<label>Expires: 01-01-2020</label>
+</div>
+<div class="rcorners1">
+	<label>Verified By: Sean Thornton</label>
+</div>
 </ion-content>
