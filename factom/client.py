@@ -116,9 +116,9 @@ def get_entry(ec, hash):
         "method": "entry",
         "params": {
             "hash": hash
+            }
         }
     r = requests.request("POST", URL, data=json.dumps(data), headers=HEADERS)
     if DEBUG:
         print(r.text)
     return r.text
-}
