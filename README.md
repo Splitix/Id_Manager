@@ -1,5 +1,9 @@
 # Id_Manager Front end
-An Id manager for the homeless to help keep track of their personal identification safely and securely
+An Id manager for the homeless to help keep track of their personal identification safely and securely.
+
+This repo was submitted for http://projects.austintexas.io/projects/mayors-blockchain-challenge/about/overview/
+
+Here are the slides from our presntation https://github.com/Splitix/Id_Manager/blob/master/docs/TeamCompassMBC_deck.pdf
 
 ### Start app locally
 1. cd into myPass folder
